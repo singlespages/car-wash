@@ -4,6 +4,14 @@ import {HomeComponent} from "./pages/home/home.component";
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: "full", redirectTo: 'inicio'
+  },
+  {
+    path: '**',
+    pathMatch: "full", redirectTo: 'inicio'
+  },
+  {
     path: 'inicio',
     component: HomeComponent
   }
