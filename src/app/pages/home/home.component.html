@@ -1,0 +1,196 @@
+<header class="header">
+
+  <div class="header__barra">
+    <div class="header__logo">
+      <img src="/assets/img/logo.png" alt="Logo">
+      <img src="/assets/img/logo-heading.png" alt="Logo">
+    </div>
+    <nav class="navegacion">
+      <a routerLink="/inicio" class="navegacion__link" routerLinkActive="active">Home</a>
+      <a (click)="scrollTo('quienes-somos')" class="navegacion__link" routerLinkActive="active">Quiénes somos</a>
+      <a (click)="scrollTo('nuestros-servicios')" class="navegacion__link" routerLinkActive="active">Nuestros servicios</a>
+      <a (click)="scrollTo('galeria')" class="navegacion__link" routerLinkActive="active">Galeria</a>
+      <a (click)="scrollTo('contacto')" class="navegacion__link" routerLinkActive="active">Contácto</a>
+    </nav>
+  </div>
+
+  <div class="header__content contenedor">
+    <div class="header__titles">
+      <img src="/assets/img/heading.png" alt="Heading">
+    </div>
+  </div>
+</header>
+
+<section class="quienes-somos" id="quienes-somos">
+  <div class="quienes-somos__content contenedor">
+    <h2 class="quienes-somos__heading">Quienes somos</h2>
+
+    <p class="quienes-somos__paragraph">
+      Somosmás que un simple CarWash y BarberShop, somos un destino para aquellos quebuscan lo mejor en cuidado automotriz y estilismo masculino. En nuestroinnovador edificio, hemos creado un ambiente que refleja la modernidad y lasofisticación, donde cada servicio está diseñado para superar tus expectativas.
+    </p>
+
+  </div>
+</section>
+
+<section class="nuestros-servicios" id="nuestros-servicios">
+  <div class="nuestros-servicios__content contenedor">
+    <h2 class="nuestros-servicios__heading">Nuestros servicios</h2>
+
+    <div class="tabs-container contenedor">
+      <div class="tab" (click)="changeTab(1)" [class.active]="activeTab === 1">
+        <span [style.color]="activeTab === 1 ? '#FDD04E' : '#fff'">CAR WASH POPULAR</span>
+      </div>
+      <div class="tab" (click)="changeTab(2)" [class.active]="activeTab === 2">
+        <span [style.color]="activeTab === 2 ? '#FDD04E' : '#fff'">MONARCA BARBER SHOP</span>
+      </div>
+      <div class="tab-line"></div>
+    </div>
+
+  </div>
+
+  <ng-container *ngIf="activeTab == 1">
+    <app-sub-car-wash></app-sub-car-wash>
+  </ng-container>
+
+  <ng-container *ngIf="activeTab == 2">
+    <app-sub-barber-shop></app-sub-barber-shop>
+  </ng-container>
+
+</section>
+
+<div class="buttons">
+  <button class="buttons__accion">Lista de servicios</button>
+</div>
+
+<section class="galeria" id="galeria">
+  <h2 class="galeria__heading">Galeria</h2>
+  <div class="galeria__buttons">
+    <button class="galeria__accion" [class.active]="gallery === 1" (click)="changeGallery(1)">car wash</button>
+    <button class="galeria__accion" [class.active]="gallery === 2" (click)="changeGallery(2)">monarca</button>
+  </div>
+
+  <ng-container *ngIf="gallery == 1">
+    <div class="gallery">
+      <div class="gallery__grid contenedor">
+        <img src="/assets/img/car-1.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-2.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-3.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-4.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-5.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-6.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-6.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-6.png" alt="" class="gallery__image">
+      </div>
+    </div>
+
+  </ng-container>
+
+  <ng-container *ngIf="gallery == 2">
+    <div class="gallery">
+      <div class="gallery__grid contenedor">
+        <img src="/assets/img/car-2.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-1.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-4.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-3.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-5.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-6.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-6.png" alt="" class="gallery__image">
+        <img src="/assets/img/car-6.png" alt="" class="gallery__image">
+      </div>
+    </div>
+  </ng-container>
+</section>
+
+<section class="contacto" id="contacto">
+  <h2 class="contacto__heading">Contacto</h2>
+
+  <div class="contacto__grid contenedor">
+    <div class="contacto__informacion">
+      <p class="contacto__direccion">Carrera 18D # 30-107 <span class="contacto__color">Valledupar</span> </p>
+
+      <p class="contacto__telefono">312 -296-6764</p>
+
+      <!--<p class="contacto__mail">Lorem Ipsum</p>-->
+
+    </div>
+    <div class="contacto__horario">
+      <ul>
+        <li>
+          <p>Lun</p>
+          <p>10 am - 8 pm</p>
+        </li>
+        <li>
+          <p>Mar</p>
+          <p>10 am - 8 pm</p>
+        </li>
+        <li>
+          <p>Mier</p>
+          <p>10 am - 8 pm</p>
+        </li>
+        <li>
+          <p>Jue</p>
+          <p>10 am - 8 pm</p>
+        </li>
+        <li>
+          <p>Vie</p>
+          <p>10 am - 8 pm</p>
+        </li>
+        <li>
+          <p>Sab</p>
+          <p>10 am - 8 pm</p>
+        </li>
+        <li>
+          <p>Dom</p>
+          <p>10 am - 8 pm</p>
+        </li>
+      </ul>
+    </div>
+    <div class="contacto__mapa">
+      <div id="map" class="maps"></div>
+
+    </div>
+  </div>
+
+</section>
+
+<footer class="footer">
+  <div class="footer__container">
+    <nav class="navegacion">
+      <a routerLink="/inicio" class="navegacion__link">Home</a>
+      <a routerLink="/quienes-somos" class="navegacion__link">Quiénes somos</a>
+      <a routerLink="/nuestros-servicios" class="navegacion__link">Nuestros servicios</a>
+      <a routerLink="#" class="navegacion__link">Galeria</a>
+      <a routerLink="#" class="navegacion__link">Contácto</a>
+    </nav>
+  </div>
+
+  <div class="footer__grid contenedor">
+    <div class="footer__monarca">
+      <div class="footer__image">
+        <img src="/assets/img/logo-monarca.png" alt="">
+      </div>
+
+      <div class="footer__social">
+        <a href="#" class="footer__fb"></a>
+        <a href="#" class="footer__ig"></a>
+        <a href="#" class="footer__wsp"></a>
+      </div>
+
+    </div>
+    <div class="footer__barber">
+      <div class="footer__image">
+        <img src="/assets/img/logo-heading.png" alt="">
+      </div>
+
+      <div class="footer__social">
+        <a href="#" class="footer__fb"></a>
+        <a href="#" class="footer__ig"></a>
+        <a href="#" class="footer__wsp"></a>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
