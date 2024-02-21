@@ -115,19 +115,30 @@
 
   &__heading {
     color: #fff;
-    font-size: 3.6rem;
     font-weight: 600;
+    font-size: 2.2rem;
     text-align: center;
-    letter-spacing: 1.2rem;
     text-transform: uppercase;
+    letter-spacing: 1rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 3.6rem;
+      letter-spacing: 1.2rem;
+    }
   }
 
   &__paragraph {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: #ffffff;
     text-align: center;
-    padding-top: 7rem;
     line-height: 2.5rem;
+    padding: 7rem 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.7rem;
+      padding-top: 7rem;
+
+    }
   }
 }
 
