@@ -12,22 +12,36 @@
 
 
   &__barra {
-    background-color: black;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 7.6rem;
+
+    @media screen and (min-width: 768px) {
+      background-color: black;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 7.6rem;
+    }
   }
 
   &__logo {
+    display: flex;
+    gap: 2rem;
+    padding-left: 3rem;
+
+    img{
+      display: inline-block;
+      width: 6rem;
+      height: 6rem;
+      object-fit: cover;
+    }
 
     @media screen and (min-width: 768px) {
-      display: flex;
+      //display: flex;
       gap: 2rem;
       img {
         display: inline-block;
         width: 6rem;
         height: 6rem;
+        object-fit: cover;
       }
 
     }
@@ -36,7 +50,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    padding-top: 2rem;
+    padding-top: 8rem;
 
     @media screen and (min-width: 768px){
       justify-content: center;
@@ -63,10 +77,14 @@
 }
 
 .navegacion {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3rem;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
 
 
   &__link {
