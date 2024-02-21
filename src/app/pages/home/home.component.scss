@@ -24,18 +24,16 @@
 
   &__logo {
     display: flex;
-    gap: 2rem;
     padding-left: 3rem;
 
     img{
       display: inline-block;
-      width: 6rem;
+      width: 10rem;
       height: 6rem;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     @media screen and (min-width: 768px) {
-      //display: flex;
       gap: 2rem;
       img {
         display: inline-block;
@@ -63,6 +61,7 @@
     img {
       width: 36rem;
       object-fit: cover;
+      margin: 0 auto;
     }
 
     @media screen and (min-width: 768px) {
