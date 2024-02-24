@@ -14,7 +14,7 @@ export class SubCarWashComponent implements AfterViewInit{
   ngAfterViewInit(): void {
     const mySwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
-      //slidesPerView: 1,
+      slidesPerView: 1,
       loop: true,
       pagination: {
         el: '.swiper-pagination',
