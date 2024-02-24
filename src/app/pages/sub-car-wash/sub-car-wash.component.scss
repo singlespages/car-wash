@@ -1,4 +1,4 @@
-
+@import 'swiper/swiper-bundle.min.css';
 .car {
   display: grid;
   grid-template-columns: 1fr;
@@ -55,17 +55,17 @@
 .car-wash {
   background-image: url("/assets/img/barber-shop-bg.png");
   background-repeat: no-repeat;
-  background-position: 0 42px;
-  background-size: cover;
+  background-position: 0 236px;
+  background-size: 100%;
 
   @media screen and (min-width: 768px) {
     background-size: 100%, cover;
+    background-position: 0 42px;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
 
 
     @media screen and (min-width: 768px) {
@@ -75,17 +75,32 @@
     }
   }
 
+  .swiper-container {
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    padding: 2rem;
+  }
+
+
+
   &__card {
     background-color: #D9D9D9;
     padding: 0 2rem;
+    border-radius: 20px;
 
-    &:nth-child(1) {
-      border-radius: 20px 0 0 20px;
+    @media screen and (min-width: 768px){
+      &:nth-child(1) {
+        border-radius: 20px 0 0 20px;
+      }
+
+      &:nth-child(4) {
+        border-radius: 0 20px 20px 0;
+      }
+
     }
 
-    &:nth-child(4) {
-      border-radius: 0 20px 20px 0;
-    }
+
 
     &:hover {
       background-color: #FDD04E;

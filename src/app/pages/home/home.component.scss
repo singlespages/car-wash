@@ -147,7 +147,7 @@
   background-image: url("/assets/img/nuestros-servicios.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
 
   @media screen and (min-width: 768px) {
     min-height: 66rem;
@@ -262,12 +262,17 @@
 .buttons {
   background-image: url("/assets/img/barber-shop-bg.png");
   background-repeat: no-repeat;
-  background-size: 100%, cover;
+  background-size: cover;
   padding-top: 6rem;
+
+  @media screen and (min-width: 768px) {
+    background-size: 100%, cover;
+    padding-top: 6rem;
+  }
 
   &__accion {
     padding: 1.5rem 2rem;
-    width: 43rem;
+    width: 34rem;
     background-color: transparent;
     border: 3px solid #FDD04E;
     color: #ffffff;
@@ -277,9 +282,14 @@
     border-radius: 10px;
     display: block;
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 1.8rem;
     transition: background-color .5s ease;
     cursor: pointer;
+
+    @media screen and (min-width: 768px){
+      width: 43rem;
+      font-size: 2rem;
+    }
 
     &:hover {
       background-color: #FDD04E;
@@ -293,24 +303,40 @@
 .galeria {
   background-image: url("/assets/img/barber-shop-bg.png");
   background-repeat: no-repeat;
-  background-size: 100%, cover;
+  background-size: cover;
   padding-top: 6rem;
+
+  @media screen and (min-width: 768px){
+    background-size: 100%, cover;
+
+  }
 
   &__heading {
     color: #fff;
-    font-size: 3.6rem;
+    font-size: 2.2rem;
     font-weight: 600;
     text-align: center;
-    letter-spacing: 1.2rem;
+    letter-spacing: 1rem;
     text-transform: uppercase;
     padding-bottom: 6rem;
+
+    @media screen and (min-width: 768px){
+      font-size: 3.6rem;
+      letter-spacing: 1.2rem;
+    }
   }
 
   &__buttons {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 3rem;
+    }
   }
 
   &__accion {
@@ -323,8 +349,12 @@
     font-weight: 300;
     border-radius: 5px;
     display: block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
+
+    @media screen and (min-width: 768px){
+      font-size: 2.5rem;
+    }
 
     &:hover {
       background-color: #FFFFFF;
@@ -346,8 +376,14 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding: 0 1.5rem;
+
+    @media screen and (min-width: 768px){
+      grid-template-columns: repeat(4, 1fr);
+
+    }
   }
 
   &__image {
