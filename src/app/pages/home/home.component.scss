@@ -433,12 +433,12 @@
 
   &__informacion {
     order: 2;
+    padding: 0 5rem;
     p{
       color: #ffffff;
       font-size: 2rem;
       font-weight: 300;
       padding-left: 6rem;
-
       span {
         display: block;
         color: #C0C0C0;
@@ -501,6 +501,13 @@
     display: flex;
     justify-content: space-around;
     position: relative;
+    width: 36rem;
+
+    @media screen and (min-width: 768px){
+      width: 80rem;
+
+
+    }
 
     &::after {
       content: '';
@@ -524,6 +531,7 @@
 
   &__mapa {
     order: 3;
+    padding: 3rem .5rem 0 .5rem;
   }
 }
 
@@ -531,9 +539,14 @@
 
 
 .maps {
-  width: 57rem;
+  width: 36rem;
   height: 47rem;
   border-radius: 10px;
+
+  @media screen and (min-width: 768px){
+    width: 57rem;
+
+  }
 }
 
 /*Footer*/
