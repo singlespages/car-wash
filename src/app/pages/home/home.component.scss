@@ -556,7 +556,12 @@
   min-height: 42rem;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-bottom: 3.5rem;
+
+  @media screen and (min-width: 768px){
+    background-position: center;
+  }
 
   &__container {
     display: flex;
@@ -567,7 +572,7 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 5rem;
+    padding-top: 2rem;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
