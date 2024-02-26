@@ -531,7 +531,7 @@
 
   &__mapa {
     order: 3;
-    padding: 3rem .5rem 0 .5rem;
+    padding: 3rem 1rem 0 1rem;
   }
 }
 
@@ -539,7 +539,7 @@
 
 
 .maps {
-  width: 36rem;
+  width: 33.5rem;
   height: 47rem;
   border-radius: 10px;
 
@@ -566,8 +566,21 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding-top: 5rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      padding-top: 5rem;
+    }
+  }
+
+  &__monarca {
+    padding-bottom: 4rem;
+    @media screen and (min-width: 768px){
+      padding-bottom: 0;
+
+    }
   }
 
   &__image {
