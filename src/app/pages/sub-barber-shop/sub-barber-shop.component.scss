@@ -1,26 +1,46 @@
+@import 'swiper/swiper-bundle.min.css';
 
 .barber {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 6rem 0;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem 0;
+
+  }
 
   &__content {
     background-color: #000000;
-    padding: 10rem 4rem 0 4rem;
+    padding: 5rem 2rem 2rem 2rem;
     border-radius: 0 20px 20px 0;
+
+    @media screen and (min-width: 768px) {
+      padding: 10rem 4rem 0 4rem;
+      border-radius: 0 20px 20px 0;
+
+    }
   }
 
   &__image {
     object-fit: cover;
+    @media screen and (min-width: 768px) {
+
+    }
   }
 
   &__heading {
     color: #ffffff;
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     font-weight: 700;
     text-align: center;
     letter-spacing: 1rem;
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.8rem;
+    }
   }
 
   &__paragraph {
@@ -37,24 +57,59 @@
   background-image: url("/assets/img/barber-shop-bg.png");
   background-repeat: no-repeat;
   background-position: 0 42px;
-  background-size: 100%, cover;
+  background-size: 100%;
+
+  @media screen and (min-width: 768px) {
+    background-size: 100%, cover;
+    background-position: 0 42px;
+  }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    max-width: 29.5rem;
+
+    @media screen and (min-width: 400px) {
+      max-width: 33.2rem;
+
+    }
+    @media screen and (min-width: 414px) {
+      max-width: 35.2rem;
+
+    }
   }
 
   &__card {
     background-color: #D9D9D9;
     padding: 0 2rem;
+    border-radius: 20px;
 
-    &:nth-child(1) {
-      border-radius: 20px 0 0 20px;
-    }
+    @media screen and (min-width: 768px){
+      &:nth-child(1) {
+        border-radius: 20px 0 0 20px;
+      }
 
-    &:nth-child(4) {
-      border-radius: 0 20px 20px 0;
+      &:nth-child(4) {
+        border-radius: 0 20px 20px 0;
+      }
+
     }
 
     &:hover {
