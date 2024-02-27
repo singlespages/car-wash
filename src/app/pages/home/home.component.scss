@@ -417,16 +417,18 @@
 
   &__grid {
     background-image: url("/assets/img/bg-map.png");
-    background-size: 50%, cover;
+    background-size: cover;
     background-repeat: no-repeat;
     display: grid;
     grid-template-rows: 1fr;
     padding-bottom: 8rem;
+    background-position: 0 -54rem;
 
 
     @media screen and (min-width: 768px){
       background-size: 50%, cover;
       grid-template-columns: 24% 30% 47%;
+      background-position: center;
 
     }
   }
@@ -539,9 +541,13 @@
 
 
 .maps {
-  width: 33.5rem;
+  width: 39rem;
   height: 47rem;
   border-radius: 10px;
+
+  @media screen and (min-width: 440px){
+    width: 39.5rem;
+  }
 
   @media screen and (min-width: 768px){
     width: 57rem;
@@ -641,6 +647,5 @@
       background-image: url("/assets/img/icono-wsp-hover.png");
     }
   }
-
-
 }
+

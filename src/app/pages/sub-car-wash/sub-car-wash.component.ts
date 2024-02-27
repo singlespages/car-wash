@@ -16,6 +16,8 @@ export class SubCarWashComponent implements AfterViewInit{
       direction: 'horizontal',
       slidesPerView: 1,
       loop: true,
+      freeMode: true,
+      centeredSlides: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
