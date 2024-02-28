@@ -11,6 +11,8 @@ export class HomeComponent {
   activeTab = 1;
   gallery = 1;
 
+  menuOpen: boolean = false;
+
   constructor(private router: Router) {
     this.loadMap();
   }
@@ -21,6 +23,10 @@ export class HomeComponent {
 
   changeGallery(galleryNumber: number) {
     this.gallery = galleryNumber;
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
   scrollTo(fragment: any): void {

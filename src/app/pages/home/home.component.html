@@ -12,6 +12,24 @@
       <a (click)="scrollTo('galeria')" class="navegacion__link" routerLinkActive="active">Galeria</a>
       <a (click)="scrollTo('contacto')" class="navegacion__link" routerLinkActive="active">Contácto</a>
     </nav>
+
+    <div class="cabecera">
+      <button (click)="toggleMenu()">
+        <img [src]="menuOpen ? 'assets/svg/menu-close.svg' : 'assets/svg/menu-open.svg'" alt="Menú">
+      </button>
+    </div>
+
+    <nav class="menu" [ngClass]="{'abierto': menuOpen}">
+      <div class="opciones">
+        <button class="boton">Opción 1</button>
+        <button class="boton">Opción 2</button>
+        <button class="boton">Opción 3</button>
+        <button class="boton">Opción 4</button>
+      </div>
+    </nav>
+
+
+
   </div>
 
   <div class="header__content contenedor">
