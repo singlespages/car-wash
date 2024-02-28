@@ -4,6 +4,7 @@
   background-image: url(/assets/img/header-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 1rem;
 
   @media screen and (min-width: 768px) {
     background-image: url("/assets/img/header.png");
@@ -188,10 +189,24 @@
   &::before {
     content: '';
     border-bottom: 3px solid #ffffff;
-    width: 33rem;
+    width: 34rem;
     position: absolute;
     height: .3rem;
     left: 0;
+  }
+
+  @media screen and (min-width: 400px){
+    &::before {
+      width: 36.5rem;
+    }
+
+  }
+
+  @media screen and (min-width: 414px){
+    &::before {
+      width: 38rem;
+    }
+
   }
 
   @media screen and (min-width: 768px) {
@@ -224,11 +239,29 @@
       position: absolute;
       bottom: 0;
       left: 0;
+
+      @media screen and (min-width: 400px){
+        width: 17rem;
+
+      }
+
+      @media screen and (min-width: 414px){
+        width: 18rem;
+
+      }
     }
 
     &:nth-child(2):after {
       left: .5rem;
       width: 17rem;
+
+      @media screen and (min-width: 400px){
+        width: 19rem;
+      }
+
+      @media screen and (min-width: 414px){
+        width: 19.5rem;
+      }
     }
 
   }
@@ -341,7 +374,7 @@
 
   &__accion {
     padding: 1.5rem 2rem;
-    width: 29.6rem;
+    width: 33rem;
     background-color: transparent;
     border: 3px solid #898989;
     color: #898989;
@@ -351,6 +384,10 @@
     display: block;
     font-size: 2rem;
     cursor: pointer;
+
+    @media screen and (min-width: 400px) {
+      width: 34rem;
+    }
 
     @media screen and (min-width: 768px){
       font-size: 2.5rem;
@@ -421,8 +458,13 @@
     background-repeat: no-repeat;
     display: grid;
     grid-template-rows: 1fr;
-    padding-bottom: 8rem;
-    background-position: 0 -54rem;
+    padding: 0 0 6rem 0;
+    background-position: -5rem -54rem;
+
+    @media screen and (min-width: 400px){
+      padding: 0 0 6rem 0;
+
+    }
 
 
     @media screen and (min-width: 768px){
@@ -507,8 +549,6 @@
 
     @media screen and (min-width: 768px){
       width: 80rem;
-
-
     }
 
     &::after {
@@ -533,7 +573,11 @@
 
   &__mapa {
     order: 3;
-    padding: 3rem 1rem 0 1rem;
+    padding: 5rem 0 0 0;
+
+    @media screen and (min-width: 414px){
+      padding: 5rem 0 0 0;
+    }
   }
 }
 
@@ -541,9 +585,19 @@
 
 
 .maps {
-  width: 39rem;
+  width: 32rem;
   height: 47rem;
   border-radius: 10px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 400px){
+    width: 35.3rem;
+  }
+
+
+  @media screen and (min-width: 414px){
+    width: 37.5rem;
+  }
 
   @media screen and (min-width: 440px){
     width: 39.5rem;

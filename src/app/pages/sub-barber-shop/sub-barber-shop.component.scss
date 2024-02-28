@@ -3,7 +3,12 @@
 .barber {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 6rem 0;
+  padding: 6rem 1.5rem;
+
+
+  @media screen and (min-width: 400px){
+    padding: 5rem 1.5rem;
+  }
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -56,7 +61,7 @@
 .barber-shop {
   background-image: url("/assets/img/barber-shop-bg.png");
   background-repeat: no-repeat;
-  background-position: 0 42px;
+  background-position: 0 236px;
   background-size: 100%;
 
   @media screen and (min-width: 768px) {
