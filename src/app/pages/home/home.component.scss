@@ -478,6 +478,11 @@
   &__informacion {
     order: 2;
     padding: 0 5rem;
+
+    @media screen and (min-width: 400px){
+      padding: 0 6rem;
+
+    }
     p{
       color: #ffffff;
       font-size: 2rem;
@@ -547,6 +552,11 @@
     position: relative;
     width: 36rem;
 
+    @media screen and (min-width: 400px){
+      width: 42rem;
+
+    }
+
     @media screen and (min-width: 768px){
       width: 80rem;
     }
@@ -558,6 +568,11 @@
       position: absolute;
       bottom: 8px;
       left: 49px;
+
+      @media screen and (min-width: 400px){
+        width: 32rem;
+
+      }
     }
 
     &:nth-child(7):after {
@@ -591,12 +606,14 @@
   margin: 0 auto;
 
   @media screen and (min-width: 400px){
-    width: 35.3rem;
+    width: 33.3rem;
+    margin-left: 1rem;
   }
 
 
   @media screen and (min-width: 414px){
-    width: 37.5rem;
+    width: 38rem;
+    margin-left: 1.5rem;
   }
 
   @media screen and (min-width: 440px){
