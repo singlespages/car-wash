@@ -158,7 +158,11 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, .8);
-  justify-content: center;
+  justify-content: end;
+
+  @media screen and (min-width: 390px){
+    justify-content: center;
+  }
 
   @media screen and (min-width: 400px) {
     justify-content: center;
@@ -194,20 +198,36 @@
   }
 
   &__barber {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
+
+    @media screen and (min-width: 390px) {
+      padding-bottom: 4rem;
+    }
   }
 
   &__image {
-    width: 13rem;
+    width: 9rem;
     margin: 0 auto;
+
+    @media screen and (min-width: 390px) {
+      width: 13rem;
+    }
+
+    @media screen and (min-width: 400px) {
+      width: 13rem;
+    }
   }
 
   &__social {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 0;
     padding-top: 4rem;
+
+    @media screen and (min-width: 390px){
+      gap: 1.5rem;
+    }
   }
 
   &__fb {
@@ -217,7 +237,15 @@
     height: 6rem;
     background-repeat: no-repeat;
     transition: background-image .5s ease;
-    background-size: 95%;
+    background-size: 70%;
+
+    @media screen and (min-width: 390px){
+      background-size: 95%;
+    }
+
+    @media screen and (min-width: 400px){
+      background-size: 95%;
+    }
 
     &:hover {
       background-image: url("/assets/img/icono-fb.png");
@@ -231,7 +259,15 @@
     height: 6rem;
     background-repeat: no-repeat;
     transition: background-image .5s ease;
-    background-size: 95%;
+    background-size: 70%;
+
+    @media screen and (min-width: 390px){
+      background-size: 95%;
+    }
+
+    @media screen and (min-width: 400px){
+      background-size: 95%;
+    }
 
     &:hover {
       background-image: url("/assets/img/icono-ig.png");
@@ -246,7 +282,15 @@
     height: 6rem;
     background-repeat: no-repeat;
     transition: background-image .5s ease;
-    background-size: 95%;
+    background-size: 70%;
+
+    @media screen and (min-width: 390px){
+      background-size: 95%;
+    }
+
+    @media screen and (min-width: 400px){
+      background-size: 95%;
+    }
 
     &:hover {
       background-image: url("/assets/img/icono-wsp.png");
