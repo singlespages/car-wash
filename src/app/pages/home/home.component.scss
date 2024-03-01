@@ -102,10 +102,14 @@
 /*Menu Responsive*/
 .cabecera {
   position: fixed;
-  top: 0;
-  left: 27.3rem;
-  width: 100%;
+  top: 1rem;
+  left: 30rem;
+  width: 7rem;
   z-index: 100;
+
+  @media screen and (min-width: 400px){
+    left: 33rem;
+  }
 
   button {
     display: block;
@@ -158,6 +162,11 @@
 
   @media screen and (min-width: 400px) {
     justify-content: center;
+  }
+
+  @media screen and (min-width: 414px){
+    justify-content: center;
+
   }
 
   button {

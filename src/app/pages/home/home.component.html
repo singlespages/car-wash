@@ -22,10 +22,10 @@
     <nav class="menu" [ngClass]="{'abierto': menuOpen}">
       <div class="opciones">
         <div class="opciones__accion">
-          <button class="boton" (click)="scrollTo('quienes-somos')">Quienes somos</button>
-          <button class="boton" (click)="scrollTo('nuestros-servicios')">Nuestros servicios</button>
-          <button class="boton" (click)="scrollTo('galeria')">Galeria</button>
-          <button class="boton" (click)="scrollTo('contacto')">Contácto</button>
+          <button class="boton" (click)="scrollTo('quienes-somos'); menuOpen = false">Quienes somos</button>
+          <button class="boton" (click)="scrollTo('nuestros-servicios'); menuOpen = false">Nuestros servicios</button>
+          <button class="boton" (click)="scrollTo('galeria'); menuOpen = false">Galeria</button>
+          <button class="boton" (click)="scrollTo('contacto'); menuOpen = false">Contácto</button>
         </div>
 
         <div class="opciones__grid contenedor">
