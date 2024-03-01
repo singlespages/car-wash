@@ -21,11 +21,43 @@
 
     <nav class="menu" [ngClass]="{'abierto': menuOpen}">
       <div class="opciones">
-        <button class="boton">Opción 1</button>
-        <button class="boton">Opción 2</button>
-        <button class="boton">Opción 3</button>
-        <button class="boton">Opción 4</button>
+        <div class="opciones__accion">
+          <button class="boton" (click)="scrollTo('quienes-somos')">Quienes somos</button>
+          <button class="boton" (click)="scrollTo('nuestros-servicios')">Nuestros servicios</button>
+          <button class="boton" (click)="scrollTo('galeria')">Galeria</button>
+          <button class="boton" (click)="scrollTo('contacto')">Contácto</button>
+        </div>
+
+        <div class="opciones__grid contenedor">
+          <div class="opciones__monarca">
+            <div class="opciones__image">
+              <img src="/assets/img/logo-monarca.png" alt="">
+            </div>
+
+            <div class="opciones__social">
+              <a href="#" class="opciones__fb"></a>
+              <a href="#" class="opciones__ig"></a>
+              <a href="#" class="opciones__wsp"></a>
+            </div>
+
+          </div>
+          <div class="opciones__barber">
+            <div class="opciones__image">
+              <img src="/assets/img/logo-heading.png" alt="">
+            </div>
+
+            <div class="opciones__social">
+              <a href="#" class="opciones__fb"></a>
+              <a href="#" class="opciones__ig"></a>
+              <a href="#" class="opciones__wsp"></a>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+
     </nav>
 
 
