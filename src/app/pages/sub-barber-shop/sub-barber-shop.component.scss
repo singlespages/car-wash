@@ -91,6 +91,10 @@
   .swiper-slide {
     max-width: 29.5rem;
 
+    @media screen and (min-width: 390px){
+      max-width: 31rem;
+    }
+
     @media screen and (min-width: 400px) {
       max-width: 33.2rem;
 
