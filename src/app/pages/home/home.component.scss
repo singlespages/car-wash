@@ -78,9 +78,13 @@
 
     @media screen and (min-width: 900px) {
       img{
-        width: 52rem;
+        width: 54rem;
         margin: 0;
       }
+    }
+
+    @media screen and (min-width: 1440px) {
+      width: 48rem;
     }
   }
 
@@ -438,8 +442,14 @@
       width: 60rem;
       left: 6rem;
     }
+  }
 
-
+  @media screen and (min-width: 900px){
+    padding: 0 14rem;
+    &::before {
+      width: 78rem;
+      left: 20rem;
+    }
   }
 
 }
@@ -508,6 +518,21 @@
           width: 31.2rem;
         }
       }
+  }
+
+  @media screen and (min-width: 900px){
+    &.active {
+      &:after {
+        width: 38rem;
+        left: 6rem;
+      }
+
+      &:nth-child(2):after {
+        left: .2rem;
+        width: 40.8rem;
+      }
+    }
+
   }
 
 }
