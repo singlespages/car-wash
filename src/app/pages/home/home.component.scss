@@ -75,6 +75,13 @@
         margin-top: 20rem;
       }
     }
+
+    @media screen and (min-width: 900px) {
+      img{
+        width: 52rem;
+        margin: 0;
+      }
+    }
   }
 
 }
@@ -631,7 +638,10 @@
 
     @media screen and (min-width: 768px){
       grid-template-columns: repeat(4, 1fr);
+    }
 
+    @media screen and (min-width: 900px) {
+      padding: 0;
     }
   }
 
