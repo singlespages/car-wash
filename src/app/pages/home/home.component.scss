@@ -9,6 +9,8 @@
   @media screen and (min-width: 768px) {
     background-image: url("/assets/img/header.png");
     min-height: 60rem;
+    padding-top: 0;
+    background-position: 88% 30%;
   }
 
 
@@ -35,12 +37,12 @@
     }
 
     @media screen and (min-width: 768px) {
-      gap: 2rem;
+      padding-left: 0;
       img {
         display: inline-block;
-        width: 6rem;
+        width: 10rem;
         height: 6rem;
-        object-fit: cover;
+        object-fit: contain;
       }
 
     }
@@ -67,8 +69,10 @@
 
     @media screen and (min-width: 768px) {
       img {
-        width: 52rem;
+        width: 43rem;
         object-fit: cover;
+        margin-left: 0;
+        margin-top: 20rem;
       }
     }
   }
@@ -83,7 +87,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
   }
 
 
@@ -109,6 +113,10 @@
 
   @media screen and (min-width: 400px){
     left: 33rem;
+  }
+
+  @media screen and (min-width: 768px){
+    display: none;
   }
 
   button {
@@ -301,7 +309,6 @@
 
 
 /*Quienes somos*/
-
 .quienes-somos {
   min-height: 50rem;
   background-image: url("/assets/img/quienes-somos.png");
@@ -311,9 +318,8 @@
   padding: 4rem 0;
 
   @media screen and (min-width: 768px) {
-    background-size: 100%, cover;
+    background-size: cover;
     padding-top: 8rem;
-
   }
 
   &__heading {
@@ -354,7 +360,7 @@
 
   @media screen and (min-width: 768px) {
     min-height: 66rem;
-    background-size: 100%, cover;
+    background-size: cover;
     padding-top: 8rem;
 
   }
@@ -379,7 +385,6 @@
 }
 
 /*TABS CONTAINER*/
-
 .tabs-container {
   display: flex;
   justify-content: space-around;
@@ -412,12 +417,17 @@
   }
 
   @media screen and (min-width: 768px) {
-    margin-left: 12rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .contenedor {
+      display: none;
+    }
 
     &::before {
       content: '';
-      width: 80rem;
-      left: 63px;
+      width: 60rem;
+      left: 6rem;
     }
 
 
@@ -449,7 +459,6 @@
 
       @media screen and (min-width: 414px){
         width: 18rem;
-
       }
     }
 
@@ -481,17 +490,23 @@
   @media screen and (min-width: 768px) {
       &.active {
         &:after {
-          width: 40rem;
-          left: -65px;
+          width: 30rem;
+          left: 6rem;
         }
 
         &:nth-child(2):after {
-          left: -9.8rem;
-          width: 41rem;
+          left: .2rem;
+          width: 31.2rem;
         }
       }
   }
 
+}
+
+.margen {
+  @media screen and (min-width: 768px){
+    padding-left: 6rem;
+  }
 }
 
 .buttons {
@@ -534,7 +549,6 @@
 }
 
 /*Galeria*/
-
 .galeria {
   background-image: url("/assets/img/barber-shop-bg.png");
   background-repeat: no-repeat;
@@ -542,8 +556,7 @@
   padding-top: 6rem;
 
   @media screen and (min-width: 768px){
-    background-size: 100%, cover;
-
+    background-size: cover;
   }
 
   &__heading {
@@ -608,7 +621,6 @@
 }
 
 /*Galeria de imagenes*/
-
 .gallery {
   background-image: url("/assets/img/barber-shop-bg.png");
   padding-top: 6rem;
@@ -634,7 +646,6 @@
 }
 
 /*Contacto*/
-
 .contacto {
   background-image: url("/assets/img/barber-shop-bg.png");
   padding-top: 6rem;
@@ -668,12 +679,11 @@
 
     }
 
-
     @media screen and (min-width: 768px){
-      background-size: 50%, cover;
-      grid-template-columns: 24% 30% 47%;
+      background-size: cover;
       background-position: center;
-
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -683,7 +693,11 @@
 
     @media screen and (min-width: 400px){
       padding: 0 6rem;
+    }
 
+    @media screen and (min-width: 768px){
+      padding: 2rem 10rem;
+      margin-left: 3rem;
     }
     p{
       color: #ffffff;
@@ -695,6 +709,7 @@
         color: #C0C0C0;
       }
     }
+
   }
 
   &__direccion {
@@ -760,7 +775,7 @@
     }
 
     @media screen and (min-width: 768px){
-      width: 80rem;
+      width: 73rem;
     }
 
     &::after {
@@ -773,7 +788,11 @@
 
       @media screen and (min-width: 400px){
         width: 32rem;
+      }
 
+      @media screen and (min-width: 768px){
+        left: 13rem;
+        width: 47rem;
       }
     }
 
@@ -799,8 +818,6 @@
 }
 
 /*Mapa y marcador*/
-
-
 .maps {
   width: 32rem;
   height: 47rem;
@@ -824,7 +841,7 @@
 
   @media screen and (min-width: 768px){
     width: 57rem;
-
+    margin: 0 auto;
   }
 }
 
@@ -879,6 +896,10 @@
     justify-content: center;
     gap: 1.5rem;
     padding-top: 4rem;
+
+    @media screen and (min-width: 768px){
+      margin-bottom: 20rem;
+    }
   }
 
   &__fb {
