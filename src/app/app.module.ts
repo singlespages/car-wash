@@ -6,17 +6,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SubBarberShopComponent } from './pages/sub-barber-shop/sub-barber-shop.component';
 import { SubCarWashComponent } from './pages/sub-car-wash/sub-car-wash.component';
+import { ListPriceComponent } from './pages/list-price/list-price.component';
+import {OverlayModule} from "@angular/cdk/overlay";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SubBarberShopComponent,
-    SubCarWashComponent
+    SubCarWashComponent,
+    ListPriceComponent,
+    ListPriceComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]

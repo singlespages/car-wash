@@ -1,6 +1,10 @@
 import {afterNextRender, Component} from '@angular/core';
 import {Router} from "@angular/router";
 import * as L from 'leaflet';
+import {Overlay, OverlayRef} from "@angular/cdk/overlay";
+import {ListPriceComponent} from "../list-price/list-price.component";
+import {ComponentPortal} from "@angular/cdk/portal";
+import {ModalService} from "../services/modal.service";
 
 @Component({
   selector: 'app-home',
@@ -10,10 +14,9 @@ import * as L from 'leaflet';
 export class HomeComponent {
   activeTab = 1;
   gallery = 1;
-
   menuOpen: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private modalService: ModalService) {
     this.loadMap();
   }
 
@@ -49,6 +52,11 @@ export class HomeComponent {
 
     })
   }
+
+  open() {
+    this.modalService.open();
+  }
+
 
 
 }
