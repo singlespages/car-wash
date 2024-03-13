@@ -107,10 +107,31 @@
 
 </section>
 
-<div class="buttons">
-  <button class="buttons__accion" (click)="open()">Lista de servicios</button>
-  <app-list-price></app-list-price>
-</div>
+<section class="lista-precios">
+  <h2 class="lista-precios__heading">Lista de precios</h2>
+  <h2 class="lista-precios__subheading">{{activeTabList == 1 ? 'Car wash popular' : 'Monarca'}}</h2>
+
+  <div class="tabs-container contenedor">
+    <div class="tab" (click)="changeTabList(1)" [class.active]="activeTabList === 1">
+      <span [style.color]="activeTabList === 1 ? '#FDD04E' : '#fff'">CAR WASH POPULAR</span>
+    </div>
+    <div class="tab margen" (click)="changeTabList(2)" [class.active]="activeTabList === 2">
+      <span [style.color]="activeTabList === 2 ? '#FDD04E' : '#fff'">MONARCA BARBER SHOP</span>
+    </div>
+    <div class="tab-line"></div>
+  </div>
+
+  <ng-container *ngIf="activeTabList == 1">
+    <app-list-prices-car></app-list-prices-car>
+  </ng-container>
+
+  <ng-container *ngIf="activeTabList == 2">
+    <span>Monarca</span>
+
+  </ng-container>
+
+
+</section>
 
 <section class="galeria" id="galeria">
   <h2 class="galeria__heading">Galeria</h2>

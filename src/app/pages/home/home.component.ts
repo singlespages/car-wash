@@ -13,6 +13,7 @@ import {ModalService} from "../services/modal.service";
 })
 export class HomeComponent {
   activeTab = 1;
+  activeTabList = 1;
   gallery = 1;
   menuOpen: boolean = false;
 
@@ -22,6 +23,10 @@ export class HomeComponent {
 
   changeTab(tabNumber: number) {
     this.activeTab = tabNumber;
+  }
+
+  changeTabList(tabNumber: number) {
+    this.activeTabList = tabNumber;
   }
 
   changeGallery(galleryNumber: number) {

@@ -8,6 +8,7 @@ import { SubBarberShopComponent } from './pages/sub-barber-shop/sub-barber-shop.
 import { SubCarWashComponent } from './pages/sub-car-wash/sub-car-wash.component';
 import { ListPriceComponent } from './pages/list-price/list-price.component';
 import {OverlayModule} from "@angular/cdk/overlay";
+import { ListPricesCarComponent } from './pages/list-prices-car/list-prices-car.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {OverlayModule} from "@angular/cdk/overlay";
     SubBarberShopComponent,
     SubCarWashComponent,
     ListPriceComponent,
-    ListPriceComponent
+    ListPriceComponent,
+    ListPricesCarComponent
   ],
   imports: [
     BrowserModule,
