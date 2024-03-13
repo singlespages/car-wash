@@ -84,17 +84,10 @@
 <section class="nuestros-servicios" id="nuestros-servicios">
   <div class="nuestros-servicios__content contenedor">
     <h2 class="nuestros-servicios__heading">Nuestros servicios</h2>
-
-    <div class="tabs-container contenedor">
-      <div class="tab" (click)="changeTab(1)" [class.active]="activeTab === 1">
-        <span [style.color]="activeTab === 1 ? '#FDD04E' : '#fff'">CAR WASH POPULAR</span>
-      </div>
-      <div class="tab margen" (click)="changeTab(2)" [class.active]="activeTab === 2">
-        <span [style.color]="activeTab === 2 ? '#FDD04E' : '#fff'">MONARCA BARBER SHOP</span>
-      </div>
-      <div class="tab-line"></div>
+    <div class="tabs contenedor">
+      <a class="tabs__button" (click)="changeTab(1)" [class.active]="activeTab === 1">Car wash popular</a>
+      <a class="tabs__button" (click)="changeTab(2)" [class.active]="activeTab === 2">Monarca Barber Shop</a>
     </div>
-
   </div>
 
   <ng-container *ngIf="activeTab == 1">
@@ -109,15 +102,9 @@
 
 <section class="lista-precios">
   <h2 class="lista-precios__heading">Lista de precios</h2>
-
-  <div class="tabs-container contenedor">
-    <div class="tab" (click)="changeTabList(1)" [class.active]="activeTabList === 1">
-      <span [style.color]="activeTabList === 1 ? '#FDD04E' : '#fff'">CAR WASH POPULAR</span>
-    </div>
-    <div class="tab margen" (click)="changeTabList(2)" [class.active]="activeTabList === 2">
-      <span [style.color]="activeTabList === 2 ? '#FDD04E' : '#fff'">MONARCA BARBER SHOP</span>
-    </div>
-    <div class="tab-line"></div>
+  <div class="tabs contenedor">
+    <a class="tabs__button" (click)="changeTabList(1)" [class.active]="activeTabList === 1">Car wash popular</a>
+    <a class="tabs__button" (click)="changeTabList(2)" [class.active]="activeTabList === 2">Monarca Barber Shop</a>
   </div>
 
   <ng-container *ngIf="activeTabList == 1">
