@@ -9,6 +9,7 @@ import { SubCarWashComponent } from './pages/sub-car-wash/sub-car-wash.component
 import { ListPriceComponent } from './pages/list-price/list-price.component';
 import {OverlayModule} from "@angular/cdk/overlay";
 import { ListPricesCarComponent } from './pages/list-prices-car/list-prices-car.component';
+import { ListPricesMonarcaComponent } from './pages/list-prices-monarca/list-prices-monarca.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListPricesCarComponent } from './pages/list-prices-car/list-prices-car.
     SubCarWashComponent,
     ListPriceComponent,
     ListPriceComponent,
-    ListPricesCarComponent
+    ListPricesCarComponent,
+    ListPricesMonarcaComponent
   ],
   imports: [
     BrowserModule,
