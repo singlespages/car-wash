@@ -73,6 +73,13 @@
 
   &__content {
     padding-top: 3rem;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+
+
+    }
   }
 
   &__table {
@@ -134,5 +141,37 @@
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+  }
+}
+
+.accordion {
+  width: 100%; // Ajusta el ancho según tus preferencias
+  padding: 3rem 1rem 0 1rem;
+
+  .accordion-item {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+
+    .accordion-header {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #FDD04E;
+      border-bottom: 1px solid #ccc;
+      position: relative; // Añadir posición relativa para posicionar el icono
+    }
+
+    .accordion-content {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 16px; // Ajusta el tamaño según tus preferencias
+      height: 16px; // Ajusta el tamaño según tus preferencias
+    }
   }
 }

@@ -254,6 +254,20 @@
       </tfoot>
     </table>
   </div>
-
 </div>
 
+
+<div class="accordion">
+  <div *ngFor="let item of accordionItems; let i = index" class="accordion-item">
+    <div class="accordion-header" (click)="toggleAccordionItem(i)">
+      {{ item.title }}
+      <img *ngIf="item.expanded" class="accordion-icon" src="/assets/svg/chevron-down.svg" alt="">
+      <img *ngIf="!item.expanded" class="accordion-icon"  src="/assets/svg/chevron-right.svg" alt="">
+    </div>
+    <div *ngIf="item.expanded" class="accordion-content">
+      <div *ngFor="let service of item.content">
+        <p>{{ service.nombre }} - Precio: ${{ service.precio }}</p>
+      </div>
+    </div>
+  </div>
+</div>
