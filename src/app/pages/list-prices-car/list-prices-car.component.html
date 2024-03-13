@@ -265,9 +265,9 @@
       <img *ngIf="!item.expanded" class="accordion-icon"  src="/assets/svg/chevron-right.svg" alt="">
     </div>
     <div *ngIf="item.expanded" class="accordion-content">
-      <div *ngFor="let service of item.content" class="accordion-contenido">
-        <p>{{ service.nombre }}</p>
-        <p>Precio: ${{ service.precio }} K</p>
+      <div *ngFor="let service of item.content" class="accordion-contenido" [style.background-color]="service.color">
+        <p [style.color]="service?.color == '#000000'? service.text : '#000000' ">{{ service.nombre }} <span style="font-size: 1rem">{{service.combo ? service.combo : '' }}</span></p>
+        <p [style.color]="service?.color == '#000000'? service.text : '#000000' ">${{ service.precio }} K</p>
       </div>
     </div>
   </div>
