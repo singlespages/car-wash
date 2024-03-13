@@ -46,14 +46,26 @@ export class HomeComponent {
 
   loadMap(): void {
     afterNextRender(() => {
-      const maps = L.map('map').setView([10.455538496023737, -73.24735569364775], 10);
+      const maps = L.map('map').setView([10.455538496023737, -73.24735569364775], 20);
+
+      let customIcon: any = {
+        iconUrl:'/assets/img/location.png',
+        iconSize:[40,40]
+    }
+      let myIcon = L.icon(customIcon);
+
+      let iconOptions = {
+        title:'Car-wash',
+        draggable:false,
+        icon:myIcon
+      }
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'OpenStreetMap'
       }).addTo(maps);
 
 
-      L.marker([10.455538496023737, -73.24735569364775], {}).addTo(maps);
+      L.marker([10.455538496023737, -73.24735569364775], iconOptions).addTo(maps);
 
     })
   }
