@@ -13,6 +13,20 @@
     background-position: 88% 30%;
   }
 
+  @media screen and (min-width: 1200px) {
+    background-image: url("/assets/img/header.png");
+    min-height: 60rem;
+    padding-top: 0;
+    background-position: 88% 30%;
+  }
+
+  @media screen and (min-width: 1900px) {
+    background-image: url("/assets/img/header.png");
+    min-height: 100rem;
+    padding-top: 0;
+    background-position: 88% 30%;
+  }
+
 
   &__barra {
     display: flex;
@@ -58,6 +72,12 @@
       padding-top: 0;
       height: 50rem;
     }
+
+    @media screen and (min-width: 1900px){
+      justify-content: center;
+      padding-top: 0;
+      height: 80rem;
+    }
   }
 
   &__titles {
@@ -69,7 +89,7 @@
 
     @media screen and (min-width: 768px) {
       img {
-        width: 43rem;
+        width: 40rem;
         object-fit: cover;
         margin-left: 0;
         margin-top: 20rem;
@@ -84,6 +104,10 @@
     }
 
     @media screen and (min-width: 1440px) {
+      width: 48rem;
+    }
+
+    @media screen and (min-width: 1900px) {
       width: 48rem;
     }
   }
@@ -794,8 +818,9 @@
     background-image: url("/assets/img/bg-map.png");
     background-size: cover;
     background-repeat: no-repeat;
-    display: grid;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 0 6rem 0;
     background-position: -5rem -54rem;
 
@@ -907,34 +932,30 @@
 
   li {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
     width: 36rem;
 
-    @media screen and (min-width: 400px){
-      width: 42rem;
-
-    }
-
     @media screen and (min-width: 768px){
       width: 73rem;
+      justify-content: space-around;
     }
 
     @media screen and (min-width: 900px) {
       width: 70rem;
-
+      justify-content: space-around;
     }
 
     &::after {
       content: '';
-      width: 27rem;
+      width: 100%;
       border: 1px solid #D9D9D9;
       position: absolute;
       bottom: 8px;
-      left: 49px;
+      left: 0;
 
       @media screen and (min-width: 400px){
-        width: 32rem;
+        width: 100%;
       }
 
       @media screen and (min-width: 768px){
@@ -988,8 +1009,7 @@
 
 
   @media screen and (min-width: 414px){
-    width: 38rem;
-    margin-left: 1.5rem;
+    width: 33.3rem;
   }
 
   @media screen and (min-width: 440px){
