@@ -5,14 +5,14 @@ import {HomeComponent} from "./pages/home/home.component";
 const routes: Routes = [
   {
     path: '',
-    pathMatch: "full", redirectTo: 'inicio'
+    pathMatch: "full", redirectTo: ''
   },
   {
     path: '**',
-    pathMatch: "full", redirectTo: 'inicio'
+    pathMatch: "full", redirectTo: ''
   },
   {
-    path: 'inicio',
+    path: '',
     component: HomeComponent
   }
 ];
